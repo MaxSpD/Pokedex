@@ -1,0 +1,87 @@
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+.pokemon-item-wrapper {
+    height: 400px;
+    width: 300px;
+}
+
+.pokemon-item-wrapper:hover {
+    animation: bounce 0.3s;
+}
+
+.pokemon-item-img-link {
+    display: inline-block;
+    background-color: #f2f2f2;
+    border-radius: 6px;
+}
+
+.pokemon-item-img {
+    width: 100%;
+}
+
+.pokemon-item-info-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.pokemon-item-name {
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #444;
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+.pokemon-item-name:hover {
+    color: #1b82b1;
+}
+
+.pokemon-item-button-catch {
+    background-color: white;
+    border: 1px solid;
+    border-radius: 4px;
+    width: 70px;
+    height: 30px;
+    color: #444;
+    font-size: 11pt;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.pokemon-item-button-catch:hover {
+    color: #1b82b1;
+}
+
+.pokemon-item-button-catch:disabled {
+    color: #444;
+    font-style: italic;
+    font-weight: normal;
+    cursor: default;
+}
+
+@media only all and (max-width: 330px) {
+    .pokemon-item-wrapper {
+        height: auto;
+        margin-bottom: 15px;
+    }
+}
+
+@media only all and (max-width: 220px) {
+    .pokemon-item-name {
+        font-size: 10pt;
+    }
+    .pokemon-item-button-catch {
+        width: 55px;
+        height: 20px;
+        font-size: 9pt;
+        padding: 0;
+    }
+}
